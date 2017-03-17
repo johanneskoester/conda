@@ -245,6 +245,14 @@ unset _CONDA_BIN
 ###########################################################################
 
 ###########################################################################
+# MANPATH                                                                 #
+# update manpath with the new conda environment                           #
+MANPATH="${CONDA_PREFIX}/man:${MANPATH}"
+export MANPATH="${MANPATH}"
+# END MANPATH                                                                #
+###########################################################################
+
+###########################################################################
 # CONDA_DEFAULT_ENV                                                       #
 # the shortest representation of how conda recognizes your env            #
 # can be an env name, or a full path (if the string contains / it's a     #

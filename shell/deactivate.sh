@@ -176,6 +176,17 @@ export PATH
 ###########################################################################
 
 ###########################################################################
+# RESTORE MANPATH                                                         #
+# remove only first instance of $CONDA_PREFIX from $MANPATH, since this is#
+# Unix we will only expect a single path that need to be removed, for     #
+# simplicity and consistency with the Windows *.bat scripts we will use   #
+# fuzzy matching (/f) to get all of the relevant removals                 #
+MANPATH=$(envvar_cleanup.bash "${MANPATH}" --delim=":" -u -f "${CONDA_PREFIX}")
+export MANPATH
+# END RESTORE MANPATH                                                        #
+###########################################################################
+
+###########################################################################
 # REMOVE CONDA_PREFIX                                                     #
 # set $_CONDA_DIR for post-deactivate loading                             #
 _CONDA_DIR="${CONDA_PREFIX}/etc/conda/deactivate.d"
