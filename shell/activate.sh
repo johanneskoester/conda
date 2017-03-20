@@ -247,7 +247,7 @@ unset _CONDA_BIN
 ###########################################################################
 # MANPATH                                                                 #
 # update manpath with the new conda environment                           #
-MANPATH="${CONDA_PREFIX}/man:${MANPATH}"
+MANPATH="${CONDA_PREFIX}/man:${CONDA_PREFIX}/share/man:${MANPATH}"
 export MANPATH="${MANPATH}"
 # END MANPATH                                                                #
 ###########################################################################

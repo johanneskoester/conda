@@ -177,7 +177,7 @@ export PATH
 
 ###########################################################################
 # RESTORE MANPATH                                                         #
-# remove only first instance of $CONDA_PREFIX from $MANPATH, since this is#
+# remove first two instances of $CONDA_PREFIX from $MANPATH, since this is#
 # Unix we will only expect a single path that need to be removed, for     #
 # simplicity and consistency with the Windows *.bat scripts we will use   #
 # fuzzy matching (/f) to get all of the relevant removals                 #
